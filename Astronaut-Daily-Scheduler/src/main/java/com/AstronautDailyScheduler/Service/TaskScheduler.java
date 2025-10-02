@@ -80,7 +80,7 @@ public class TaskScheduler implements TaskSubject {
                 for (Task newTask : astronaut.getTasks()) {
                     if (!(task.getEndTime().isBefore(newTask.getStartTime()) || newTask.getEndTime().isBefore(task.getStartTime()))) {
                         System.out.println("Overlaps for Astronaut " + astronaut.getID());
-                        System.out.println(newTask.getDescription() + " (" + task.getStartTime() + "-" + task.getEndTime() + ") overlaps with " + task.getDescription() + " (" + newTask.getStartTime() + "-" + newTask.getEndTime() + ")");
+                        System.out.println(newTask.getDescription() + " (" + newTask.getStartTime() + "-" + newTask.getEndTime() + ") overlaps with " + task.getDescription() + " (" + task.getStartTime() + "-" + task.getEndTime() + ")");
                         return true;
                     }
                 }
@@ -95,8 +95,8 @@ public class TaskScheduler implements TaskSubject {
 
         for (Task task: owner.getTasks()) {
             if (!(task.getEndTime().isBefore(newTask.getStartTime()) || newTask.getEndTime().isBefore(task.getStartTime()))) {
-                LoggerObserver.logError(newTask.getDescription() + " (" + task.getStartTime() + "-" + task.getEndTime() + ") overlaps with " + task.getDescription() + " (" + newTask.getStartTime() + "-" + newTask.getEndTime() + ")");
-                System.out.println(newTask.getDescription() + " (" + task.getStartTime() + "-" + task.getEndTime() + ") overlaps with " + task.getDescription() + " (" + newTask.getStartTime() + "-" + newTask.getEndTime() + ")");
+                LoggerObserver.logError(newTask.getDescription() + " (" + newTask.getStartTime() + "-" + newTask.getEndTime() + ") overlaps with " + task.getDescription() + " (" + task.getStartTime() + "-" + task.getEndTime() + ")");
+                System.out.println(newTask.getDescription() + " (" + newTask.getStartTime() + "-" + newTask.getEndTime() + ") overlaps with " + task.getDescription() + " (" + task.getStartTime() + "-" + task.getEndTime() + ")");
                 return true;
             }
         }
