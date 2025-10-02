@@ -128,7 +128,7 @@ public class ConsoleUI implements TaskObserver {
         System.out.print("Enter task new start time (HH:MM): ");
         LocalTime newStart = getTimeInput();
 
-        System.out.print("Enter task new start time (HH:MM): ");
+        System.out.print("Enter task new end time (HH:MM): ");
         LocalTime newEnd = getTimeInput();
 
         System.out.print("Enter new priority (LOW, MID, HIGH): ");
